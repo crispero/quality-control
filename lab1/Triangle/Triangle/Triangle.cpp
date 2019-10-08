@@ -4,11 +4,11 @@
 
 struct AnswerOptions
 {
-	std::string common = "Обычный";
-	std::string isosceles = "Равнобедренный";
-	std::string equilateral = "Равносторонний";
-	std::string notTriangle = "Не треугольник";
-	std::string unknownError = "Неизвестная ошибка";
+	std::string common = "Common";
+	std::string isosceles = "Isosceles";
+	std::string equilateral = "Equilateral";
+	std::string notTriangle = "NotTriangle";
+	std::string unknownError = "UnknownError";
 };
 
 bool isTriangle(const int a, const int b, const int c)
