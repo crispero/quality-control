@@ -2,13 +2,13 @@
 #include <vector>
 #include <string>
 
-struct AnswerOptions
+namespace AnswerOptions
 {
-	std::string common = "Common";
-	std::string isosceles = "Isosceles";
-	std::string equilateral = "Equilateral";
-	std::string notTriangle = "NotTriangle";
-	std::string unknownError = "UnknownError";
+	const std::string Common = "Common";
+	const std::string Isosceles = "Isosceles";
+	const std::string Equilateral = "Equilateral";
+	const std::string NotTriangle = "NotTriangle";
+	const std::string UnknownError = "UnknownError";
 };
 
 bool isTriangle(const int a, const int b, const int c)
@@ -39,7 +39,7 @@ bool isEquilateralTriangle(const int a, const int b, const int c)
 	return false;
 }
 
-std::string DetermineTriangleType(std::vector<int>& triangleSide, AnswerOptions answerOptions)
+std::string DetermineTriangleType(std::vector<int>& triangleSide)
 {
 	const int a = triangleSide[0];
 	const int b = triangleSide[1];
@@ -49,29 +49,25 @@ std::string DetermineTriangleType(std::vector<int>& triangleSide, AnswerOptions 
 	{
 		if (isEquilateralTriangle(a, b, c))
 		{
-			return answerOptions.equilateral;
+			return AnswerOptions::Equilateral;
 		}
 
 		if (isIsoscelesTriangle(a, b, c))
 		{
-			return answerOptions.isosceles;
+			return AnswerOptions::Isosceles;
 		}
 
-		return answerOptions.common;
+		return AnswerOptions::Common;
 	}
 
-	return answerOptions.notTriangle;
+	return AnswerOptions::NotTriangle;
 }
 
 int main(int argc, char* argv[])
 {
-	setlocale(LC_ALL, "Russian");
-
-	AnswerOptions answerOptions = AnswerOptions();
-
 	if (argc != 4)
 	{
-		std::cout << answerOptions.unknownError << std::endl;
+		std::cout << AnswerOptions::UnknownError << std::endl;
 		return 1;
 	}
 
@@ -83,14 +79,13 @@ int main(int argc, char* argv[])
 			triangleSide.push_back(std::stoi(argv[i]));
 		}
 	}
-	catch (...)
+	catch (std::exception&)
 	{
-		std::cout << answerOptions.unknownError << std::endl;
+		std::cout << AnswerOptions::UnknownError << std::endl;
 		return 1;
 	}
 
-	std::cout << DetermineTriangleType(triangleSide, answerOptions) << std::endl;
-
+	std::cout << DetermineTriangleType(triangleSide) << std::endl;
 
 	return 0;
 }
