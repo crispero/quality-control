@@ -1,0 +1,13 @@
+http://52.136.215.164/broken-links/../links/teapot418.php 500
+http://52.136.215.164/broken-links/../links/404not404found404.php 404
+http://52.136.215.164/broken-links/../links/un503availible.php 503
+http://52.136.215.164/broken-links/../links/access401unauthorized.php 401
+http://52.136.215.164/broken-links/../links/found302.php 302
+http://52.136.215.164/broken-links/../links/502gateaway502.php 502
+http://52.136.215.164/broken-links/../links/return500bad.php 500
+http://52.136.215.164/broken-links/../links/movedper.php 301
+http://52.136.215.164/broken-links/tel://1234567920 403
+http://52.136.215.164/broken-links/../links/deny403forbidden.php 403
+http://52.136.215.164/broken-links/../links/locked.php 423
+Count: 11
+Date: Wed Oct 23 14:52:13 MSK 2019
