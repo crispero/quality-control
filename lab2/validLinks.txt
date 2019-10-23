@@ -1,0 +1,13 @@
+http://52.136.215.164/broken-links/work.html 200
+http://52.136.215.164/broken-links/contact.html 200
+http://52.136.215.164/broken-links/# 200
+http://52.136.215.164/broken-links/about.html 200
+http://52.136.215.164/broken-links/pricing.html 200
+http://52.136.215.164/broken-links/index.html 200
+https://colorlib.com 200
+http://52.136.215.164/broken-links/ 200
+http://52.136.215.164/broken-links/blog-single.html 200
+http://52.136.215.164/broken-links/../links/no204content.php 204
+http://52.136.215.164/broken-links/blog.html 200
+Count: 11
+Date: Wed Oct 23 14:52:13 MSK 2019
