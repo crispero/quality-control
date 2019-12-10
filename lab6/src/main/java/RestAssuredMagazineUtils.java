@@ -9,7 +9,7 @@ public class RestAssuredMagazineUtils {
     public static String EDIT_PRODUCT_END_POINT = "/editproduct";
     public static Integer SUCCESS_STATUS_CODE = 200;
 
-    public static void getProductsStatusCode() {
+    public void getProductsStatusCode() {
         given().baseUri(BASE_API_URL).when().get(PRODUCT_END_POINT).then().assertThat().statusCode(SUCCESS_STATUS_CODE);
     }
 }

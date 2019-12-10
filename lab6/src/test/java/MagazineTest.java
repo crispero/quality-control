@@ -7,6 +7,6 @@ public class MagazineTest {
 
     @Test
     void getProductsApiStatusCode_CorrectValue_ReturnSuccessStatusCode() {
-        RestAssuredMagazineUtils.getProductsStatusCode();
+        restAssuredMagazineUtils.getProductsStatusCode();
     }
 }
